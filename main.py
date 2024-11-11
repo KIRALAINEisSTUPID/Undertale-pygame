@@ -2,7 +2,8 @@ import tkinter as tk
 from tkinter import font
 from PIL import Image, ImageTk
 import pygame
-
+import os
+import webbrowser
 # Инициализация pygame для воспроизведения музыки
 pygame.mixer.init()
 try:
@@ -13,7 +14,7 @@ except pygame.error:
 
 # Создание главного окна
 window = tk.Tk()
-window.title("Undertale * Menu")
+window.title("Undertale ~ Menu")
 window.geometry("1200x900")
 window.resizable(False,False)
 icon = tk.PhotoImage(file='Assets/img/icons/b_heart.png')  # You can use .png or .gif
@@ -34,16 +35,23 @@ pixel_font = font.Font(family="Courier", size=20)  # Моноширинный ш
 def on_enter(event, label):
     label.config(fg="yellow")
 
+def on_enter3(event, label):
+    label.config(fg="purple")
 def on_leave(event, label):
     label.config(fg="white")
 
 # Функция для действия при нажатии на "кнопку"
 def action1(event):
-    print("Действие 1 выполнено!")
+    pygame.mixer.music.stop()
+    window.destroy()
+    os.system("python game.py")
+    
 
 def action2(event):
-    print("Действие 2 выполнено!")
+    window.destroy()
 
+def action3(event):
+    webbrowser.open_new_tab("https://github.com/KIRALAINEisSTUPID/Undertale_pygame")
 # Создание меток, которые будут работать как кнопки
 label1 = tk.Label(window, text="Play", bg="black", fg="white", font=pixel_font, cursor="hand2")
 label1.place(x=350, y=350)
@@ -57,5 +65,11 @@ label2.bind("<Enter>", lambda e: on_enter(e, label2))  # Изменение цв
 label2.bind("<Leave>", lambda e: on_leave(e, label2))  # Восстановление цвета при выходе курсора
 label2.bind("<Button-1>", action2)  # Действие при клике
 
+
+label3 =tk.Label(window, text="View code on Github♡", bg="black", fg="white", font=pixel_font, cursor="hand2")
+label3.place(x=400,y=860)
+label3.bind("<Enter>", lambda e: on_enter3(e, label3))  # Изменение цвета при наведении
+label3.bind("<Leave>", lambda e: on_leave(e, label3))  # Восстановление цвета при выходе курсора
+label3.bind("<Button-1>", action3) 
 # Запуск главного цикла приложения
 window.mainloop()
