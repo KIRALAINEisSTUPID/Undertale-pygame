@@ -17,7 +17,7 @@ window = tk.Tk()
 window.title("Undertale ~ Menu")
 window.geometry("1200x900")
 window.resizable(False,False)
-icon = tk.PhotoImage(file='Assets/img/icons/b_heart.png')  # You can use .png or .gif
+icon = tk.PhotoImage(file='Assets/img/icons/b_heart.png') 
 window.iconphoto(True, icon)
 # Загрузка фона
 background_image = Image.open("Assets/img/backgrounds/menu_bg.png")
@@ -44,7 +44,7 @@ def on_leave(event, label):
 def action1(event):
     pygame.mixer.music.stop()
     window.destroy()
-    os.system("python game.py")
+    os.system("python player_name.py")
     
 
 def action2(event):
