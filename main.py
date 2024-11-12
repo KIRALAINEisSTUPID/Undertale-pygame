@@ -51,7 +51,7 @@ def action2(event):
     window.destroy()
 
 def action3(event):
-    webbrowser.open_new_tab("https://github.com/KIRALAINEisSTUPID/Undertale_pygame")
+    webbrowser.open_new_tab("https://github.com/KIRALAINEisSTUPID/Undertale-pygame")
 # Создание меток, которые будут работать как кнопки
 label1 = tk.Label(window, text="Play", bg="black", fg="white", font=pixel_font, cursor="hand2")
 label1.place(x=350, y=350)
