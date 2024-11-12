@@ -7,9 +7,10 @@ pygame.init()
 # Задаем размеры окна
 width, height = 1450, 900
 screen = pygame.display.set_mode((width, height))
-
+logo = pygame.image.load("Assets/img/icons/r_heart.png")
+pygame.display.set_icon(logo)
 # Задаем заголовок окна
-pygame.display.set_caption("Мое окно в Pygame")
+pygame.display.set_caption("Undertale")
 
 # Основной цикл
 running = True
