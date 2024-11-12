@@ -2,6 +2,8 @@ import tkinter as tk
 from tkinter import font, messagebox
 import pygame
 import re
+import os
+from funcs import open_terminal
 # Создаем главное окно
 root = tk.Tk()
 root.geometry("1200x900")
@@ -44,6 +46,9 @@ def submit_name():
         # Если файл уже существует, он будет перезаписан
         with open("user_name.txt", "w") as file:
             file.write(name_user)
+        pygame.mixer.stop()
+        root.destroy()
+        open_terminal("python game.py")
         
 # Метка вместо кнопки с эффектом наведения
 done_label = tk.Label(root, text="Done", font=pixel_font, bg="black", fg="white", cursor="hand2")
