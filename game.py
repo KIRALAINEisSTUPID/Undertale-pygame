@@ -18,7 +18,7 @@ while running:
 
     screen.blit(bg_image, (0, 0))
 
-    pygame.display.flip()
+    pygame.display.update()
 
 pygame.quit()
 sys.exit()

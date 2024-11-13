@@ -4,7 +4,6 @@ import pygame
 import re
 import os
 from funcs import open_terminal
-# Создаем главное окно
 root = tk.Tk()
 root.geometry("1200x900")
 root.resizable(False,False)
