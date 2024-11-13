@@ -8,6 +8,7 @@ pygame.init()
 width, height = 1450, 900
 screen = pygame.display.set_mode((width, height))
 logo = pygame.image.load("Assets/img/icons/soul.png")
+bg_image = pygame.image.load("Assets/img/backgrounds/undertale-game.jpg")
 pygame.display.set_icon(logo)
 # Задаем заголовок окна
 pygame.display.set_caption("Undertale")
@@ -20,8 +21,7 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-    # Заполнение фона цветом (например, белый)
-    screen.fill((255, 255, 255))
+    screen.blit(bg_image, (0, 0))
 
     # Обновляем экран
     pygame.display.flip()
