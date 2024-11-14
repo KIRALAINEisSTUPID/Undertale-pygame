@@ -61,19 +61,19 @@ class Player(pygame.sprite.Sprite):
         new_direction = self.direction
 
         # Перемещение и смена направления
-        if keys[pygame.K_LEFT]:
+        if keys[pygame.K_LEFT] and self.rect.x > 0:
             self.rect.x -= PLAYER_SPEED
             new_direction = 'left'
             moving = True
-        elif keys[pygame.K_RIGHT]:
+        elif keys[pygame.K_RIGHT] and self.rect.x < 1400:
             self.rect.x += PLAYER_SPEED
             new_direction = 'right'
             moving = True
-        elif keys[pygame.K_UP]:
+        elif keys[pygame.K_UP] and self.rect.y > 500:
             self.rect.y -= PLAYER_SPEED
             new_direction = 'up'
             moving = True
-        elif keys[pygame.K_DOWN]:
+        elif keys[pygame.K_DOWN] and self.rect.y < 800:
             self.rect.y += PLAYER_SPEED
             new_direction = 'down'
             moving = True

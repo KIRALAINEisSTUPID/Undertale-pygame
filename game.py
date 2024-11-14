@@ -14,7 +14,7 @@ pygame.display.set_icon(logo)
 pygame.display.set_caption("Undertale")
 
 # Инициализация игрока
-player = Player(400, 300)
+player = Player(400, 500)
 clock = pygame.time.Clock()
 
 # Группа спрайтов
@@ -22,7 +22,7 @@ all_sprites = pygame.sprite.Group(player)
 
 pygame.mixer.init()
 try:
-    pygame.mixer.music.load("Assets/sounds/soundtracks/OneShot OST - Niko and the World Machine.mp3")
+    pygame.mixer.music.load("Assets/sounds/soundtracks/OneShot OST - Thanks For Everything.mp3")
     pygame.mixer.music.play(loops=-1, start=0.0)
 except pygame.error:
     print("Music file not found!")

@@ -60,7 +60,7 @@ label1.bind("<Leave>", lambda e: on_leave(e, label1))  # Восстановле�
 label1.bind("<Button-1>", action1)  # Действие при клике
 
 label2 = tk.Label(window, text="Quit", bg="black", fg="white", font=pixel_font, cursor="hand2")
-label2.place(x=750, y=350)
+label2.place(x=800, y=350)
 label2.bind("<Enter>", lambda e: on_enter(e, label2))  # Изменение цвета при наведении
 label2.bind("<Leave>", lambda e: on_leave(e, label2))  # Восстановление цвета при выходе курсора
 label2.bind("<Button-1>", action2)  # Действие при клике
