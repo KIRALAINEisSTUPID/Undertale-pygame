@@ -2,7 +2,7 @@ import pygame
 import sys
 import funcs
 from funcs import Player
-
+from pygame import mixer
 pygame.init()
 
 # Параметры окна
@@ -20,6 +20,12 @@ clock = pygame.time.Clock()
 # Группа спрайтов
 all_sprites = pygame.sprite.Group(player)
 
+pygame.mixer.init()
+try:
+    pygame.mixer.music.load("Assets/sounds/soundtracks/OneShot OST - Niko and the World Machine.mp3")
+    pygame.mixer.music.play(loops=-1, start=0.0)
+except pygame.error:
+    print("Music file not found!")
 # Основной игровой цикл
 running = True
 while running:

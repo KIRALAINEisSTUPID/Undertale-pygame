@@ -15,7 +15,7 @@ root.iconphoto(True, icon)
 
 pygame.mixer.init()
 try:
-    pygame.mixer.music.load("Assets/sounds/soundtracks/waterfall.mp3")
+    pygame.mixer.music.load("Assets/sounds/soundtracks/OneShot OST - Niko and the World Machine.mp3")
     pygame.mixer.music.play(loops=-1, start=0.0)
 except pygame.error:
     print("Music file not found!")
