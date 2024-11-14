@@ -54,13 +54,13 @@ def action3(event):
     webbrowser.open_new_tab("https://github.com/KIRALAINEisSTUPID/Undertale-pygame")
 # Создание меток, которые будут работать как кнопки
 label1 = tk.Label(window, text="Play", bg="black", fg="white", font=pixel_font, cursor="hand2")
-label1.place(x=350, y=350)
+label1.place(x=300, y=350)
 label1.bind("<Enter>", lambda e: on_enter(e, label1))  # Изменение цвета при наведении
 label1.bind("<Leave>", lambda e: on_leave(e, label1))  # Восстановление цвета при выходе курсора
 label1.bind("<Button-1>", action1)  # Действие при клике
 
 label2 = tk.Label(window, text="Quit", bg="black", fg="white", font=pixel_font, cursor="hand2")
-label2.place(x=700, y=350)
+label2.place(x=750, y=350)
 label2.bind("<Enter>", lambda e: on_enter(e, label2))  # Изменение цвета при наведении
 label2.bind("<Leave>", lambda e: on_leave(e, label2))  # Восстановление цвета при выходе курсора
 label2.bind("<Button-1>", action2)  # Действие при клике
