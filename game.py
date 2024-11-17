@@ -43,7 +43,7 @@ while running:
     pygame.display.update()
 
     # Ограничение FPS
-    clock.tick(30)
+    clock.tick(45)
    
     # Обновление спрайтов
     all_sprites.update()

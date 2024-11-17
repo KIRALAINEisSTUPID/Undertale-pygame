@@ -6,7 +6,7 @@ screenSize = (640, 480)
 screenFlags = 0
 
 # Game Properties
-tileSize = 64
+tileSize = 40
 fps = 60
 
 # Fonts

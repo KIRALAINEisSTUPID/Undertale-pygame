@@ -32,7 +32,7 @@ name_entry.place(x=300, y=350)
 def submit_name():
     name_user = name_entry.get()
     
-    if len(name_user) > 6 or not re.match("^[A-Za-zА-Яа-я]+$", name_user):
+    if len(name_user) > 10 or not re.match("^[A-Za-zА-Яа-я]+$", name_user):
         messagebox.showerror("Error", "The name must not contain random characters and must be shorter than 7 characters.")
     else:
         with open("user_name.txt", "w") as file:

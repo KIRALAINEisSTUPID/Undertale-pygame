@@ -1,5 +1,6 @@
 import subprocess
 import platform
+import os
 import pygame
 def open_terminal(command):
     system = platform.system()
@@ -43,6 +44,9 @@ sprites = {
               load_and_scale_sprite('Assets/img/sprites/Frisk/Right/1.png')]
 }
 
+
+        
+
 # Класс игрока
 class Player(pygame.sprite.Sprite):
     def __init__(self, x, y):
@@ -78,6 +82,10 @@ class Player(pygame.sprite.Sprite):
             new_direction = 'down'
             moving = True
 
+        elif keys[pygame.K_z]:
+            
+
+            os.system("python fight.py")
         # Сброс анимации при смене направления
         if new_direction != self.direction:
             self.direction = new_direction

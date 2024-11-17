@@ -7,9 +7,9 @@ from battle import Battle
 class Game:
     def __init__(self):
         pygame.init()
-        self.screen = pygame.display.set_mode(screenSize, flags=screenFlags)
-        pygame.display.set_caption('PyTale: Undertale on Python')
-        pygame.display.set_icon(pygame.image.load('assets/images/gui/icon.png'))
+        self.screen = pygame.display.set_mode(screenSize,flags=screenFlags)
+        pygame.display.set_caption('Undertale')
+        pygame.display.set_icon(pygame.image.load('Assets/img/icons/soul.png'))
 
         self.clock = pygame.time.Clock()
 
